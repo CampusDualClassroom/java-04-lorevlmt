@@ -24,9 +24,8 @@ public class Exercise04 {
         /* Hay que hacer un bucle que sume nº consecutivos
            Se puede hacer con for y con while */
         for (int i = 1; i <= num; i++) { // De 1 a 5 incluído
-            total = total + i;
+            total = total + i; //   total += i
         }
-
         return total;
     }
 
@@ -36,13 +35,11 @@ public class Exercise04 {
 
         for (int i = 2; i <= num * 2; i++) {
             if (i % 2 == 0) {
-                total2 = total2 + i;
+                total2 = total2 + i; // total2 += i
             }
         }
-
         return total2;
     }
-
 
     public static int factorial(int num) {
         int total3 = 1;
@@ -50,18 +47,16 @@ public class Exercise04 {
         for (int i = 1; i <= num; i++) {
             total3 = total3 * i;
         }
-
         return total3;
     }
 
 
     public static int recursiveFactorial(int num) {
 
-        if (num == 1) {
+        if (num == 0) {
             return 1;
+        } else {
+            return num * recursiveFactorial(num - 1);
         }
-
-        return num * recursiveFactorial(num - 1);
-
     }
 }
